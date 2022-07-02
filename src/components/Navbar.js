@@ -9,10 +9,10 @@ const Navbar = () => {
         <NavLink exact to="/">
           Home
         </NavLink>
-        <NavLink exact to="/Single-player">
+        <NavLink exact to="/Single">
           Single
         </NavLink>
-        <NavLink exact to="/Multi-player">
+        <NavLink exact to="/Multi">
           Multi
         </NavLink>
       </nav>

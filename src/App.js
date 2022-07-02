@@ -2,6 +2,7 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Main from "./Pages/Main";
 import Details from "./Pages/Multi";
+import Multi from "./Pages/Multi";
 import Single from "./Pages/Single";
 
 export default function App() {
@@ -13,10 +14,10 @@ export default function App() {
           <Route exact path="/">
             <Main />
           </Route>
-          <Route exact path="/Single-player">
+          <Route exact path="/Single">
             <Single />
           </Route>
-          <Route exact path="/Multi-player">
+          <Route exact path="/Multi">
             <Details />
           </Route>
         </Switch>
