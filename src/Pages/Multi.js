@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { players } from "../Global";
 
@@ -51,11 +52,11 @@ function Multi() {
             <div>Number of players added: {counter - 1}</div>
           </div>
         </div>
-        <a href="/Single">
+        <Link to="/Single">
           <div className="p-4 border-text-primary border-2 text-text-primary font-medium rounded-md hover:bg-text-primary hover:text-white">
             Let's Play
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );
