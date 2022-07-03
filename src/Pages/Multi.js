@@ -1,26 +1,27 @@
 import React, { useState } from "react";
+import { useRecoilState } from "recoil";
+import { players } from "../Global";
 
 function Multi() {
   const [counter, setCounter] = useState(1);
   const [inputFields, setInputFields] = useState([]);
-
-  var dict = [];
+  const [data, setData] = useRecoilState(players);
 
   const handleClick = () => {
     setCounter(counter + 1);
     console.log(counter);
-    setInputFields([...inputFields, { name: "" }]);
-    console.log(inputFields);
+    setInputFields([...inputFields, { name: "", score: 0 }]);
+    setData([...inputFields, { name: "", score: 0 }]);
+    console.log(data);
   };
-
-
 
   const playerdata = (e) => {
     e.preventDefault();
     const { value } = e.target;
     const list = [...inputFields];
-    list[counter - 1] = value;
+    list[counter - 1] = { name: value, score: 0 };
     setInputFields(list);
+    setData(list);
   };
 
   return (
@@ -29,17 +30,17 @@ function Multi() {
       <div className="flex flex-col gap-10">
         <h1 className="">Enter Players</h1>
         <div className="flex flex-col gap-4">
-            {Array.from(Array(counter)).map((c, index) => {
-              return (
-                <input
-                  key={c}
-                  type="text"
-                  className="h-8 w-full px-3 rounded bg-background-lightblue outline-none"
-                  placeholder="Enter Name"
-                  onChange={(e) => playerdata(e)}
-                ></input>
-              );
-            })}
+          {Array.from(Array(counter)).map((c, index) => {
+            return (
+              <input
+                key={c}
+                type="text"
+                className="h-8 w-full px-3 rounded bg-background-lightblue outline-none"
+                placeholder="Enter Name"
+                onChange={(e) => playerdata(e)}
+              ></input>
+            );
+          })}
           <div className="flex flex-col gap-4">
             <button
               onClick={handleClick}
@@ -47,12 +48,14 @@ function Multi() {
             >
               + Add Player
             </button>
-            <div>Number of players added: {counter -1 }</div>
+            <div>Number of players added: {counter - 1}</div>
           </div>
         </div>
-        <div className="p-4 border-text-primary border-2 text-text-primary font-medium rounded-md hover:bg-text-primary hover:text-white">
-          Let's Play
-        </div>
+        <a href="/Single">
+          <div className="p-4 border-text-primary border-2 text-text-primary font-medium rounded-md hover:bg-text-primary hover:text-white">
+            Let's Play
+          </div>
+        </a>
       </div>
     </div>
   );

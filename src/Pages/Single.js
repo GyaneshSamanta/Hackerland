@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Recorder from "../components/Recorder";
+import { useRecoilValue } from "recoil";
+import { players } from "../Global";
 
 const Single = () => {
-  const [score, setScore] = useState()
+  const playerData = useRecoilValue(players);
+  console.log(playerData);
 
   return (
     <div className="flex flex-col gap-20 pt-20 items-center h-screen">

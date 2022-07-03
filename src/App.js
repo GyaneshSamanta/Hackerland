@@ -2,7 +2,6 @@ import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Main from "./Pages/Main";
 import Multi from "./Pages/Multi";
-
 import Single from "./Pages/Single";
 
 export default function App() {
