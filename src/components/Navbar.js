@@ -1,21 +1,21 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between p-10 px-44">
+    <div className="flex justify-between p-10 px-44 bg-background-primary">
       Heading
-      <nav className="flex gap-4">
-        <NavLink exact to="/">
+      <div className="flex gap-4">
+        <Link exact to="/">
           Home
-        </NavLink>
-        <NavLink exact to="/Single">
+        </Link>
+        <Link exact to="/Single">
           Single
-        </NavLink>
-        <NavLink exact to="/Multi">
+        </Link>
+        <Link exact to="/Multi">
           Multi
-        </NavLink>
-      </nav>
+        </Link>
+      </div>
     </div>
   );
 };
