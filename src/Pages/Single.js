@@ -9,14 +9,14 @@ const Single = () => {
   console.log(playerData);
 
   var items = [
-    "neutral",
-    "calm",
-    "happy",
-    "sad",
-    "angry",
-    "fearful",
-    "disgust",
-    "surprised",
+    "Neutral",
+    "Calm",
+    "Happy",
+    "Sad",
+    "Angry",
+    "Fearful",
+    "Disgust",
+    "Surprised",
   ];
 
   const handleClick = () => {
@@ -24,15 +24,15 @@ const Single = () => {
   };
 
   return (
-    <div className="flex flex-col gap-20 pt-20 items-center h-screen">
+    <div className="flex flex-col gap-10 pt-5 items-center h-screen">
       <h1 className="text-text-primary font-bold text-3xl">Single player</h1>
+      <div>Current highscore: 230</div>
       <div>
         <button onClick={handleClick}>
-          <spam>Click me</spam>
+          <spam className="text-white font-bold text-2xl p-4 px-6 bg-background-seconary rounded-md">Click me</spam>
         </button>
       </div>
-      <h1>{mood}</h1>
-      <div>Current highscore: </div>
+      <h1 className="text-text-primary font-bold text-4xl">Mood: {mood}</h1>
       <Recorder />
     </div>
   );

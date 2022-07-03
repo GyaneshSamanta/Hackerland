@@ -26,7 +26,7 @@ function Multi() {
   };
 
   return (
-    <div className="h-screen flex flex-col gap-20 pt-20 items-center text-center">
+    <div className="h-screen flex flex-col gap-20 pt-5 items-center text-center">
       <div className="text-text-primary font-bold text-3xl">Multi Player</div>
       <div className="flex flex-col gap-10">
         <h1 className="">Enter Players</h1>

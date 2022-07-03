@@ -10,7 +10,7 @@ const Recorder = () => {
           <div className="flex flex-col gap-5 text-center">
             <p>{status}</p>
             <video src={mediaBlobUrl} controls />
-            <div className="flex justify-between">
+            <div className="flex justify-between mt-4">
               <button onClick={startRecording}>Start Recording 🎙️</button>
               <button onClick={stopRecording}>Stop Recording 🛑</button>
             </div>
