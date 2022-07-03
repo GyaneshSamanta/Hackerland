@@ -13,14 +13,15 @@ function Main() {
       <div className="flex justify-evenly text-white text-lg">
         <a href="/Single">
           <div className="p-4 px-6 bg-background-seconary rounded-md">
-            Single Player
+            {/* Single Player */}
+            Lets Play
           </div>
         </a>
-        <a href="/Multi">
+        {/* <a href="/Multi">
           <div className="p-4 px-6 bg-background-seconary rounded-md">
             Multi Player
           </div>{" "}
-        </a>
+        </a> */}
       </div>
     </div>
   );
