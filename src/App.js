@@ -1,4 +1,4 @@
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Main from "./Pages/Main";
 import Multi from "./Pages/Multi";
@@ -8,22 +8,21 @@ import Single from "./Pages/Single";
 export default function App() {
   return (
     <div classname="App">
-      <BrowserRouter>
-        <Navbar />
+      <Router>
         <div className="bg-background-primary">
           <Switch>
             <Route exact path="/">
               <Main />
             </Route>
-            <Route exact path="/Single">
+            <Route path="/Single">
               <Single />
             </Route>
-            <Route exact path="/Multi">
+            <Route path="/Multi">
               <Multi />
             </Route>
           </Switch>
         </div>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }

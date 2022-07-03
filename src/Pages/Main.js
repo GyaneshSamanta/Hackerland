@@ -11,16 +11,16 @@ function Main() {
         <div className="text-text-primary font-bold text-4xl">Mood Sings</div>
       </div>
       <div className="flex justify-evenly text-white text-lg">
-        <Link exact to="/Single">
+        <a href="/Single">
           <div className="p-4 px-6 bg-background-seconary rounded-md">
             Single Player
           </div>
-        </Link>
-        <Link exact to="/Multi">
+        </a>
+        <a href="/Multi">
           <div className="p-4 px-6 bg-background-seconary rounded-md">
             Multi Player
           </div>{" "}
-        </Link>
+        </a>
       </div>
     </div>
   );

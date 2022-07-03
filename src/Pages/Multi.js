@@ -4,8 +4,9 @@ function Multi() {
   const [numbers, setPlayer] = useState();
 
   return (
-    <div className="">
-      <h1>Choose number of players</h1>
+    <div className="h-screen flex flex-col gap-20 pt-20 items-center">
+      <div className="text-text-primary font-bold text-3xl">Multi Player</div>
+      <h1 className="">Choose number of players</h1>
       <div>
         <select
           id="players"
