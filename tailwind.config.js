@@ -7,7 +7,8 @@ module.exports = {
         background: {
           primary: "#FEF6E4",
           seconary: "#F582AE",
-          
+          lightblue :"#8BD3DD"
+
         },
         text: {
           primary: "#001858",

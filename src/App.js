@@ -14,10 +14,10 @@ export default function App() {
             <Route exact path="/">
               <Main />
             </Route>
-            <Route path="/Single">
+            <Route exact path="/Single">
               <Single />
             </Route>
-            <Route path="/Multi">
+            <Route exact path="/Multi">
               <Multi />
             </Route>
           </Switch>
