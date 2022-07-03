@@ -10,6 +10,7 @@ export default function App() {
     <div classname="App">
       <Router>
         <div className="bg-background-primary">
+          <Navbar />
           <Switch>
             <Route exact path="/">
               <Main />

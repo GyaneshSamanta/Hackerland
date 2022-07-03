@@ -6,15 +6,10 @@ const Navbar = () => {
     <div className="flex justify-between p-10 px-44 bg-background-primary">
       Heading
       <div className="flex gap-4">
-        <Link exact to="/">
+        <a href="/">
           Home
-        </Link>
-        <Link exact to="/Single">
-          Single
-        </Link>
-        <Link exact to="/Multi">
-          Multi
-        </Link>
+        </a>
+        
       </div>
     </div>
   );

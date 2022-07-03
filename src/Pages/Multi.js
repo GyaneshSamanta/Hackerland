@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function Multi() {
   const [counter, setCounter] = useState(1);
   const [inputFields, setInputFields] = useState([]);
-  const [name, setName] = useState("");
+
   var dict = [];
 
   const handleClick = () => {
@@ -47,10 +47,10 @@ function Multi() {
             >
               + Add Player
             </button>
-            <div>Number of players added: {counter -1}</div>
+            <div>Number of players added: {counter -1 }</div>
           </div>
         </div>
-        <div className="p-4 border-text-primary border-2 text-text-primary font-medium rounded-md">
+        <div className="p-4 border-text-primary border-2 text-text-primary font-medium rounded-md hover:bg-text-primary hover:text-white">
           Let's Play
         </div>
       </div>
